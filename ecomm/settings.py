@@ -29,7 +29,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG")
 
-ALLOWED_HOSTS = ["conscious-closet.onrender.com"]
+ALLOWED_HOSTS = ["*"]
 
 SITE_URL = "http://127.0.0.1:8000"  # Update with your actual site URL
 
