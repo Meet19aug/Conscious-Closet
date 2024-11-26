@@ -20,7 +20,7 @@
               <tr>
                 <th>Product</th>
                 <th>Size</th>
-                <th>Color</th>
+                <!-- <th>Color</th> -->
                 <th>Quantity</th>
                 <th>Price</th>
               </tr>
@@ -31,11 +31,11 @@
                 <td><a href="{% url 'get_product' item.product.slug %}" class="title text-dark">
                   {{ item.product.product_name }}</a></td>
                 <td>{{ item.size_variant.size_name|default:"N/A" }}</td>
-                {% if item.size_variant %}
+                <!-- {% if item.size_variant %}
                   {% for color in item.product.color_variant.all %}
                     <td>{{ color.color_name|default:"N/A" }}</td>
                   {% endfor %}
-                {% endif %}
+                {% endif %} -->
                 <td>{{ item.quantity }}</td>
                 <td>$ {{ item.product_price }}</td>
               </tr>
@@ -83,12 +83,12 @@
                 <strong>{{ order.payment_mode }}</strong>
               </dd>
             </dl>
-            <dl class="dlist-align">
+            <!-- <dl class="dlist-align">
               <dt style="width: 150px;">Shipping Address:</dt>
               <dd class="text-right">
                 <strong>{{ order.shipping_address|default:"Not Provided" }}</strong>
               </dd>
-            </dl>
+            </dl> -->
           </div>
         </div>
       </main>
