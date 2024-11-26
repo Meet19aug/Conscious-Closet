@@ -90,6 +90,10 @@ def register_page(request):
         profile = Profile.objects.get(user=user_obj)
         profile.email_token = str(uuid.uuid4())
         profile.save()
+
+        send_account_activation_email(email, profile.email_token)
+        messages.success(request, "An email has been sent to your mail.")
+
         return HttpResponseRedirect(request.path_info)
 
     return render(request, 'accounts/register.html')
