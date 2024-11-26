@@ -45,7 +45,7 @@ def login_page(request):
         user_obj = authenticate(username=username, password=password)
         if user_obj:
             login(request, user_obj)
-            messages.success(request, 'Login Successfull.')
+            messages.success(request, 'Login Successful.')
             
             # Check if the next URL is safe
             if url_has_allowed_host_and_scheme(url=next_url, allowed_hosts=request.get_host()):
