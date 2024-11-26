@@ -27,6 +27,9 @@ from accounts.forms import UserUpdateForm, UserProfileForm, ShippingAddressForm,
 
 
 def login_page(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+
     next_url = request.GET.get('next')  # Default to 'index' if 'next' is not provided
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -60,6 +63,9 @@ def login_page(request):
 
 
 def register_page(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+        
     if request.method == 'POST':
         username = request.POST.get('username')
         first_name = request.POST.get('first_name')
