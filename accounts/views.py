@@ -205,7 +205,7 @@ def create_checkout_session(request):
             line_items=[
                 {
                     "price_data": {
-                        "currency": "inr",
+                        "currency": "cad",
                         "product_data": {
                             "name": "Sustainable Clothing Cart",
                             "description": f"Order from {user.username}",

@@ -32,8 +32,8 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/atulguptag/Django-eCommerce-Website.git
-   cd Django-eCommerce-Website
+   git clone https://github.com/abhishek-rma7/conscious-closet
+   cd conscious-closet
    ```
 
 2. **Create a virtual environment:**
